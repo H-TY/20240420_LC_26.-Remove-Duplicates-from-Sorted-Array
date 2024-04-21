@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // const nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+
+        const nums = [1, 1, 2]
+
+        // 方法1. 修改原陣列
+        function re() {
+            let NewNums = nums.filter((value, index) => {
+                console.log(nums.indexOf(value))
+                return nums.indexOf(value) == index
+            })
+
+            nums.splice(0)
+            nums.push(...NewNums)
+
+            let k = nums.length
+            return k
+        }
+        console.log(re())
+
+
+        // // 方法2. .filter 不會修改原陣列，另外新建一個陣列
+        // function re() {
+        //     let NewNums = nums.filter((value, index) => {
+        //         console.log(nums.indexOf(value))
+        //         return nums.indexOf(value) == index
+        //     })
+        //     console.log(NewNums)
+        //     document.write(NewNums)
+        //     let k = NewNums.length
+        //     return k
+        // }
+        // console.log(re())
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
